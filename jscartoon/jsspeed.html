@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+     <meta charset="UTF-8">
+    <title>js动画</title>
+    <style>
+    #div1{
+      width: 200px;
+      height: 200px;
+      background: red;
+      position: relative;
+      left: -200px;
+      top: 0;
+
+
+    }
+    #div1 span{
+      width: 20px;
+      height: 50px;
+      background: blue;
+      position: absolute;
+      left: 200px;
+      top: 75px;
+    }
+    
+  </style>
+  <script type="text/javascript">
+      window.onload = function(){
+        var oDiv = document.getElementById('div1');
+        oDiv.onmouseover = function(){
+          startMove();
+        }
+      }
+      var timer=null;
+      function startMove(){
+        clearInterval(timer);
+        var oDiv = document.getElementById('div1');
+        timer = setInterval(function(){
+          if(oDiv.offsetLeft==0) {
+            clearInterval(timer);
+          }else{
+            oDiv.style.left = oDiv.offsetLeft+1+'px';
+          }
+        },30)
+      }
+
+
+  </script>
+</head>
+<body>
+  <div id="div1"><span>分享</span></div>   
+
+</body>
+</html>
