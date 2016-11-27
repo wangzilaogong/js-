@@ -37,7 +37,7 @@
               var speed = (iTarget - obj.offsetWidth)/8;
               speed = speed >0? Math.ceil(speed):Math.floor(speed);
               if (obj.offsetWidth == iTarget) {
-                clearInterval(timer);
+                clearInterval(obj.timer);
 
               } else{
                 obj.style.width = obj.offsetWidth+speed+'px';
