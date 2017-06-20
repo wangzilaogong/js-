@@ -109,6 +109,8 @@
     var num3 = Number("000011"); //11
     var num4 = Number(true); //1
     //鉴于这个函数不够合理，所以我们经常用的是parseInt处理整数的时候。
+
+
     var num5 = parseInt("12345blue"); //12345
     var num6 = parseInt(""); //NaN
     var num7 = parseInt("0xA"); //10
@@ -120,5 +122,29 @@
     //ECMA3
      var numa = parseInt("070")//56 8进制
     //ECMA5
-     var numa = parseInt("070")//70 10进制
+     var numb = parseInt("070")//70 10进制
+    //操蛋的代码，一个版本一个变化，一个标准。
+    //为了解决这样的问题他大爷的又加了个参数
+    var numc = parseInt("AF",16);//这样做就很聪明了 175
+    var numd = parseInt("AF");//NaN
+
+
+
+    var numd = parseInt("10",2);//2
+    var nume = parseInt("10",8);//8
+    var numf = parseInt("10",10);//10
+    var numg = parseInt("10",16);//16
+
+    //parseFloat()解析的方式差不多，嗯，都是从0位置开始的，但是解析第一个小数点 ，第二个就不解析了，如22.34.5 只能得出22.34
+    //parseFloat()和parseInt()始终忽略前面的0，这也就意味着他只能解析10进制的，不像parseInt()，后面加个参数就能换个解析方式。
+    var numh = parseFloat("0xA");//0
+    var numl = parseFloat("3.125e7")//31250000
+    //6-14 0.30
+
+
+
+
+
+
+
 

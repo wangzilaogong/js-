@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>闭包</title>
+    <script>
+        //作用域链
+//        var a = 1;
+//        function test(){
+//            var b = 2;
+//            return a;
+//        }
+//        test();
+//        var a = 1;
+//        function test(){
+//            var b = 2;
+//            function as(){
+//                alert('ssss');
+//            }
+//            function test1(){
+//                var c = 3;
+//                function av(){
+//                    var e = 5;
+//                }
+//                alert(a);
+//                alert(b);
+//                alert(c);
+//                return c;
+//            }
+//            test1();
+//        }
+//            test();
+
+        //词法作用域
+        function  f1(){
+            var a = 12;
+            return f2();
+        }
+        function f2(){
+            return a;
+        }
+        alert(f1());
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>

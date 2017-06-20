@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>func</title>
+    <script>
+//        function  a(param){
+//            function b(param1){
+//                return param1+10;
+//            }
+//            return '在a函数体内调用b函数的结果为'+b(param);
+//        }
+//        document.write(a(5));//外层直接调用a函数，b不行。内部私有函数
+//        function a(param){
+//            var b = function (param1) {
+//                return b+10;//这里页面是显示的b函数
+//            }
+//            return b(param)
+//        }
+
+//        //返回函数的函数
+//        function a(){
+//            alert('aaa');
+//            return function (){
+//                alert('bbb');
+//            }
+//        }
+//        a()();
+
+//        //重写自己的函数
+//        function a(){
+//           alert('aaa');
+//            a = function(){
+//                alert('bbb');
+//            }
+//        }
+//        a();
+//        a();
+
+        //针对不同浏览器的选择return
+        var a = function(){
+            function setUp(){
+                var setup = 'doSomeThing';
+                alert(setup);
+            }
+            function doWhat(){
+                alert('要执行的操作');
+            }
+            setUp();
+            return doWhat;
+        }();
+        a();//再次调用的时候，a已经变成了而return 的doWhat函数;
+    </script>
+</head>
+<body>
+
+</body>
+</html>
