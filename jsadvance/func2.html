@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    var setValue,getValue;
+    (function(){
+        var n = 0;
+        getValue = function(){
+            return n ;
+        };
+        setValue = function(x){
+            n = x;
+        };
+    })();
+        alert(getValue());
+//        alert(n); n is 没被定义
+        setValue(555);
+        alert(getValue());
+    //设置了n的值，但是外部无法直接访问n，需要通过getValue或是setValue
+
+
+
+</script>
+
+</body>
+</html>

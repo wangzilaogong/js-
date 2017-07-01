@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<script>
+    function test(x){
+        var  i = 0;
+        return function () {
+            return x[i++];
+        }
+    }
+    //迭代器
+    var next = test(['a','b','c']);
+    alert(next()); alert(next()); alert(next());
+
+</script>
+</body>
+</html>

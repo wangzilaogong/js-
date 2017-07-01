@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    function f(){
+        var a =[];
+        var i;
+        for(i=0;i<3;i++){
+            a[i] = function(){
+                return i;
+            }
+        }
+        return a;
+    }
+    var test = f();
+    alert(test[0]());
+    alert(test[0]());
+    alert(test[0]());
+
+</script>
+
+</body>
+</html>
