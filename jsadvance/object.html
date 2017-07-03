@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>object</title>
+</head>
+<body>
+    <script>
+        var arr = ['a','b','c'];
+        console.log(Object.keys(arr));
+        var obj ={
+            0:'a',
+            1:'b',
+            2:'c'
+        };
+        console.log(Object.keys(obj));
+        var obj1 = Object.create({},{
+           getFoo:{
+               value:function(){
+                   return this.foo;
+               }
+           }
+        });
+        obj1.foo = 123;
+        console.log(Object.getFoo);
+        //获取对象所有属性
+        console.log(Object.getOwnPropertyNames(arr));
+
+    </script>
+
+</body>
+</html>
