@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>全局预处理</title>
+</head>
+<body>
+     <script>
+         f();
+         g();//没被定义在js预处理的时候
+         function  f(){
+             console.log('ff');
+         }
+         var g = function () {
+             console.log('gg');
+         }
+
+     </script>
+</body>
+</html>
