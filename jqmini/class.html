@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>class</title>
+</head>
+<body>
+    <script>
+        function P(){
+
+        }
+        function C(){
+
+        }
+       //inherit
+//        C.prototype =P.prototype;//相同的引用
+//          C.prototype = new P();//new对象起到了桥接作用
+        C.prototype = Object.create(P.prototype);
+
+    </script>
+</body>
+</html>

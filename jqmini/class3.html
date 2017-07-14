@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>class</title>
+</head>
+<body>
+<script>
+    function Person(name,age){
+        this.age = age;
+        this.name = name;
+    }
+    Person.prototype.eat =function(){
+        console.log('eat');
+    };
+    Person.prototype.headCount =1;
+
+    function Programmer(name,age,title){
+        Person.apply(this,arguments);
+    }
+    creatEx(Programmer,Person);
+//    Programmer.prototype =Object.create(Person.prototype);
+//    Programmer.prototype.constructor=Programmer;//修正
+    Programmer.prototype.language = "js";
+    Programmer.prototype.work = function(){
+        console.log('iam'+this.language);
+    };
+    function creatEx(Child,Parent){
+        function F(){};
+        F.prototype = Parent.prototype;
+        Child.prototype = new F();
+        Child.prototype.constructor =Child;
+        Child.super = Child.base = Parent.prototype;
+    }
+</script>
+
+</body>
+</html>

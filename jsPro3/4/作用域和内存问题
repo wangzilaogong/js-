@@ -1,0 +1,51 @@
+Ch4 作用域和内存问题
+    4.1基本类型和引用类型的值
+    ECMA标准下
+        值赋给变量
+            undefined、null Boolean number String 都是值访问的。
+            JavaScript不允许直接访问内存里的位置，也就是说不能直接操作对象的内存空间。在操作对象的时候实际上是对对象的引用而不是实际的值
+            实际上还是引用
+        这一章节我觉得我应该把注意力放在作用域和执行环境，和垃圾收集机制；
+        4.1.1动态属性
+           var person = new Object();
+           person.name = "wk";
+           alert(person.name);
+
+          无法给基本类型的值添加属性感觉和废话差不多
+           var name = 'sdsads';
+           name.age = 27;//error
+           alert(name.age);
+
+        4.1.2 复制变量的值
+        var num1 = 5;
+        var num2 = num1;
+        实际上是2个变量的，各个变量参与任何操作互不影响、值的复制
+        //引用类型
+        var obj1 = new Object();
+        var obj2 = obj1;
+        obj1.name ='wk';
+        alert(obj2.name);//wk;
+        复制的新的对象实例，然后obj1和obj2都指向同一个对象Object，所以相互之间操作的会造成影响。but都是指向堆内存里的同一个Object对象
+
+        4.1.3
+        function add(num){
+            num+=10;
+            return num;
+        }
+        var count = 20;
+        var result = add(count);
+        alert(count);//20
+        alert(result);//30
+
+        num 实际上是函数的局部变量，count作为参数传递给了count 20 于是20复制给了num 进行了函数操作，不影响原来的值，因为不是引用型的
+
+        //
+        function setName(obj){
+            obj.name = 'wk'; this?
+        }
+        var person = new Object();
+        setName(person);
+        alert(person.name);
+
+
+

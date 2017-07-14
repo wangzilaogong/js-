@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+<script>
+    function Person(name){
+        var age = 100;
+        function pm(){
+            console.log("private method");
+        }
+        this.name = name;
+        this.test = function(){
+            console.log("public method!");
+            pm();
+        }
+    }
+
+
+
+
+</script>
+
+</body>
+</html>

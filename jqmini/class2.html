@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>继承</title>
+</head>
+<body>
+    <script>
+        function Person(){
+        }
+        Person.prototype.eat =function(){
+            console.log('eat');
+        };
+        Person.prototype.headCount =1;
+
+        function Programmer(){
+
+        }
+
+        Programmer.prototype =Object.create(Person.prototype);
+        Programmer.prototype.constructor=Programmer;//修正
+        Programmer.prototype.language = "js";
+        Programmer.prototype.work = function(){
+            console.log('iam'+this.language);
+        };
+    </script>
+</body>
+</html>
