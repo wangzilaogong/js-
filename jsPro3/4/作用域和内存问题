@@ -47,5 +47,20 @@ Ch4 作用域和内存问题
         setName(person);
         alert(person.name);
 
+        //7-15
+        function setName(obj){
+           obj.name = 'wl';
+           obj = new Obejct();//这边变成了局部变量，会被销毁的
+           obj.name = "wk";
+        }
+          var person = new Object();
+          setName(person);
+          alert(person.name);//wl
+
+         person->name
+         new 一个新对象赋给obj，但是没有变化，说明在函数内部修改了参数的值，但原始的引用仍然保持不变。实际上是在内部重写obj时，这个变量的引用就是一个局部对象
+        操作的不是同一个对象，一个被销毁了。故还是传参下的那个变量的obj
 
 
+        //7-16
+        //7-16
