@@ -1,3 +1,5 @@
-# js-
-# js特效
-# 还有夹杂jQuery的
+# js
+# jqmini just a simple study  record for js oop 
+# jsPro3 record for JS elevation 3
+### 
+
