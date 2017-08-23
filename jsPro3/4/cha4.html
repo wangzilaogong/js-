@@ -13,6 +13,25 @@
 //        setName(person);
 //        alert(person.name);
 
+        //4.2
+        var  color = "blue";
+        function changecolor (){
+            if (color === 'blue'){
+                color = "red";
+            }else {
+                color = "blue"
+            }
+        }
+        changecolor();
+        alert(color);
+        //4.2.1 延长作用域
+        function buildUrl(){
+            var qs = "?debug=true";
+            with (location){
+                var url = href + qs;
+            }
+            return url;
+        }
 
 
     </script>
