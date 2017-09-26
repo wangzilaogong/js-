@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<canvas id="drawing" width="200" height="200">
+    A drawing of something here .
+
+</canvas>
+
+    <script>
+        var drawing = document.getElementById("drawing");
+        //确定是否支持浏览器
+        if(drawing.getContext){
+           var context = drawing.getContext("2d");
+           // more code
+        }
+    </script>
+
+</body>
+</html>
