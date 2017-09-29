@@ -7,7 +7,6 @@
 <body>
 
 <canvas id="drawing" width="200" height="200">
-    A drawing of something here .
 
 </canvas>
 
@@ -15,8 +14,16 @@
         var drawing = document.getElementById("drawing");
         //确定是否支持浏览器
         if(drawing.getContext){
+            console.log("aaa");
            var context = drawing.getContext("2d");
            // more code
+            context.strokeStyle ="red";
+            context.fillStyle ="#0000ff";
+            context.fillRect(10,10,50,50);
+
+            //
+            context.fillStyle="rgba(0,0,255,0.5)";
+            context.fillRect(30,30,50,50);//x,y width,height
         }
 
     </script>
